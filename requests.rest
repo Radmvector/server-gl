@@ -1,0 +1,88 @@
+# Create User
+POST http://localhost:8000/users
+Content-Type: application/json
+
+{
+    "name": "Angga Rizki Adam",
+    "email": "admin2@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "userStatus": "admin",
+    "phone": 123
+}
+
+###
+# get All User
+GET http://localhost:8000/users
+
+###
+# get Single User
+GET http://localhost:8000/users/64619f8d0c58ee4000f9ccce
+
+###
+# Update User
+PATCH  http://localhost:8000/users/64619f8d0c58ee4000f9ccce
+Content-Type: application/json
+
+{
+    "name": "John Updated",
+    "email": "johnkang@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "userStatus": "member",
+    "phone": 123
+}
+
+###
+# Delete User
+DELETE http://localhost:8000/users/64619f8d0c58ee4000f9ccce
+
+###
+# Login User Admin
+POST http://localhost:8000/auth
+Content-Type: application/json
+
+{
+    "email": "admin2@gmail.com",
+    "password": "654321"
+}
+
+###
+# Login User Guest
+POST http://localhost:8000/auth
+Content-Type: application/json
+
+{
+    "email": "enha@gmail.com",
+    "password": "123456"
+}
+
+###
+# Get User by Session
+GET http://localhost:8000/auth
+
+###
+# Logout User
+DELETE http://localhost:8000/auth/
+
+
+# Room
+#############################################
+
+###
+# Create Room
+POST http://localhost:8000/rooms
+Content-Type: application/json
+
+{
+    "roomNumber": "5",
+    "roomTag": "a"
+}
+
+###
+# Get All Room
+GET http://localhost:8000/rooms
+
+###
+# Get Single Room
+GET http://localhost:8000/rooms/6461a2c1fb41116d8706e0bb
